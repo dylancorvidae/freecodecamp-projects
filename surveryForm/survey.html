@@ -4,11 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="survey.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
   <title>Survey Form</title>
 </head>
 <body>
-  <main>
-    
-  </main>
+
+  <header>
+    <h1 id="title">Survey Extravaganza</h1>
+    <p id="description">Sir Cupcake wants to bring you new opportunities for enjoyment! We would like your feedback on what you'd like to see and in what formats. Thank you so much for your help.</p>
+  </header>
+  
+  <form id="survey-form">
+    <div id="form-group">
+      <label id="name-label" for="name">Name</label>
+      <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required/>
+    </div>
+    <div id="form-group">
+      <label id="email-label" for="email">Email</label>
+      <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required/>
+    </div>
+    <div id="form-group">
+      <label id="number-label" for="number">Age</label>
+      <input type="number" name="age" id="number" min="0" max="120" class="form-control" placeholder="Age" required/>
+    </div>
+  </form>
+  
 </body>
 </html>
