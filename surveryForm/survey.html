@@ -15,19 +15,41 @@
   </header>
   
   <form id="survey-form">
+
     <div id="form-group">
       <label id="name-label" for="name">Name</label>
       <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required/>
     </div>
+
     <div id="form-group">
       <label id="email-label" for="email">Email</label>
       <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required/>
     </div>
+
     <div id="form-group">
       <label id="number-label" for="number">Age</label>
       <input type="number" name="age" id="number" min="0" max="120" class="form-control" placeholder="Age" required/>
     </div>
-  </form>
+    
+  <div class="form-group">
+    <p>What is your favorite apparatus or act?</p>
+    <select id="favorite" name="favorite" class="form-control" required>
+      <option value="trapeze">Trapeze</option>
+      <option value="lyra">Lyra</option>
+      <option value="rope">Rope</option>
+      <option value="partner-acro">Partner Acro</option>
+      <option value="chains">Chains</option>
+      <option value="duo-acts">Duo Acts</option>
+      <option value="group-acts">Group Acts</option>
+      <option value="hand-balancing">Hand Balancing</option>
+      <option value="silks">Silks</option>
+      <option value="dance">Dance</option>
+      <option value="skits">Skits</option>
+  </div>
   
+  <div class="form-group">
+  </div>
+  </form>
+
 </body>
 </html>
