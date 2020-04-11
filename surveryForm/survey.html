@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="survey.css">
   <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <title>Survey Form</title>
 </head>
 <body>
@@ -15,40 +16,114 @@
   </header>
   
   <form id="survey-form">
-
-    <div id="form-group">
+    
+    <div class="form-group">
       <label id="name-label" for="name">Name</label>
       <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required/>
     </div>
-
-    <div id="form-group">
+    
+    <div class="form-group">
       <label id="email-label" for="email">Email</label>
       <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required/>
     </div>
-
-    <div id="form-group">
-      <label id="number-label" for="number">Age</label>
-      <input type="number" name="age" id="number" min="0" max="120" class="form-control" placeholder="Age" required/>
+    
+    <div class="form-group">
+      <label id="number-label" for="number">Age<span class="clue"> (optional)</span></label>
+      <input type="number" name="age" id="number" min="0" max="120" class="form-control" placeholder="Age"/>
     </div>
     
-  <div class="form-group">
-    <p>What is your favorite apparatus or act?</p>
-    <select id="favorite" name="favorite" class="form-control" required>
-      <option value="trapeze">Trapeze</option>
-      <option value="lyra">Lyra</option>
-      <option value="rope">Rope</option>
-      <option value="partner-acro">Partner Acro</option>
-      <option value="chains">Chains</option>
-      <option value="duo-acts">Duo Acts</option>
-      <option value="group-acts">Group Acts</option>
-      <option value="hand-balancing">Hand Balancing</option>
-      <option value="silks">Silks</option>
-      <option value="dance">Dance</option>
-      <option value="skits">Skits</option>
-  </div>
-  
-  <div class="form-group">
-  </div>
+    <div class="form-group">
+      <p>What is your favorite apparatus or act?</p>
+      <select id="dropdown" name="favorite" class="form-control" required>
+        <option value="trapeze">Trapeze</option>
+        <option value="lyra">Lyra</option>
+        <option value="rope">Rope</option>
+        <option value="partner-acro">Partner Acro</option>
+        <option value="chains">Chains</option>
+        <option value="duo-acts">Duo Acts</option>
+        <option value="group-acts">Group Acts</option>
+        <option value="hand-balancing">Hand Balancing</option>
+        <option value="silks">Silks</option>
+        <option value="dance">Dance</option>
+        <option value="skits">Skits</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <p> Would you recommend Sir Cupcake's Queer Circus to friends?</p>
+      <label>
+        <input name="recommendation" value="strongly-agree" type="radio" class="input-radio"/>
+        Strongly Agree
+      </label>
+      <label>
+        <input name="recommendation" value="agree" type="radio" class="input-radio"/>
+        Agree
+      </label>
+      <label>
+        <input name="recommendation" value="not-sure" type="radio" class="input-radio"/>
+        Not Sure
+      </label>
+      <label>
+        <input name="recommendation" value="disagree" type="radio" class="input-radio"/>
+        Disagree
+      </label>
+      <label>
+        <input name="recommendation" value="strongly-disagree" type="radio" class="input-radio"/>
+        Strongly Disagree
+      </label>
+    </div>
+      
+      <div class="form-group" id="formats">
+        <p>Sir Cupcake wants to try out different formats for shows, which format would you like to see more of?
+          <span class="clue">(Check all that apply)</span>
+        </p>
+        <label>
+          <input name="prefer" value="feature" type="checkbox" class="input-checkbox"/>
+          Feature Length Show <span class="clue">(Current Format)</span>
+        </label>
+        <label>
+          <input name="prefer" value="variety" type="checkbox" class="input-checkbox"/>
+          Variety Show <span class="clue">(Circus acts without skits or storylines)</span>
+        </label>
+        <label>
+          <input name="prefer" value="guerilla" type="checkbox" class="input-checkbox"/>
+          Guerilla shows <span class="clue">(Small impromptu shows that pop up in unexpected places with minimal or no advertising)</span>
+        </label>
+        <label>
+          <input name="prefer" value="livestream-feature" type="checkbox" class="input-checkbox"/>
+          Livestream Feature Show
+        </label>
+        <label>
+          <input name="prefer" value="livestream-variety" type="checkbox" class="input-checkbox"/>
+          Livestream Variety Show
+        </label>
+        <label>
+          <input name="prefer" value="livestream-guerilla" type="checkbox" class="input-checkbox"/>
+          Livestream Guerilla Show
+        </label>
+        <label>
+          <input name="prefer" value="youtube-channel" type="checkbox" class="input-checkbox"/>
+          Youtube Channel <span class="clue">(Featuring individual performances, workouts, makeup tutorials, behind the scenes footage, various queer circus content)</span>
+        </label>
+        <label>
+          <input name="prefer" value="patreon" type="checkbox" class="input-checkbox"/>
+          Patreon <span class="clue">(Featuring individual performances, workouts, makeup tutorials, behind the scenes footage, various queer circus content)</span>
+        </label>
+      </div>
+      
+      <div class="form-group">
+        <p>Any comments or suggestions?</p>
+        <textarea
+          id="comments"
+          class="textarea"
+          name="comment"
+          placeholder="Enter your comment here..."
+        ></textarea>
+      </div>
+      
+      <div class="form-group">
+        <button type="submit" id="submit" class="submit-button">Submit</button>
+      </div>
   </form>
 
 </body>
